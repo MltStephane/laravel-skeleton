@@ -76,7 +76,7 @@ services:
         image: 'phpmyadmin:latest'
         restart: always
         ports:
-            - '${FORWARD_PHPMYADMIN_PORT:-8081}:8081'
+            - '${FORWARD_PHPMYADMIN_PORT:-8081}:80'
         networks:
             - sail
         environment:
