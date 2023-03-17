@@ -5,9 +5,18 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Str;
 
-return new class extends Migration {
+return new class extends Migration
+{
+    private static function password(): string
+    {
+        if (app()->isLocal()) {
+            return Hash::make('stephane@mulot.dev');
+        }
+
+        return str()->password(12, true, true, false, false);
+    }
+
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
@@ -31,14 +40,5 @@ return new class extends Migration {
     public function down(): void
     {
         Schema::dropIfExists('users');
-    }
-
-    private static function password(): string
-    {
-        if (app()->isLocal()) {
-            return Hash::make('stephane@mulot.dev');
-        }
-
-        return str()->password(12, true, true, false, false);
     }
 };
