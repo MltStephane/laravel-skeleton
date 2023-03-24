@@ -1,0 +1,1 @@
+<x-button type="button" wire:click="closeOverlay()" icon="x" label="Retour" gray />

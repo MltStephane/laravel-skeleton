@@ -1,0 +1,1 @@
+<x-button type="submit" icon="check" label="Sauvegarder" blue />

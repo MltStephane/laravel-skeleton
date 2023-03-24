@@ -1,0 +1,12 @@
+{{--<x-wire-elements-pro::tailwind.slide-over>--}}
+{{--    <div class="space-y-4">--}}
+
+{{--    </div>--}}
+
+{{--    <x-slot:title>{{ $overlayTitle }}</x-slot:title>--}}
+
+{{--    <x-slot:buttons>--}}
+{{--        <x-buttons.submit />--}}
+{{--        <x-buttons.cancel />--}}
+{{--    </x-slot:buttons>--}}
+{{--</x-wire-elements-pro::tailwind.slide-over>--}}
