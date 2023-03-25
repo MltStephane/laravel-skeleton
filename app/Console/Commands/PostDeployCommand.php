@@ -28,6 +28,7 @@ class PostDeployCommand extends Command
                 'artisan route:clear',
                 'artisan schedule:clear-cache',
                 'artisan queue:restart',
+                'artisan storage:link',
             ],
         ];
 

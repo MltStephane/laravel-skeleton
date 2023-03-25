@@ -5,5 +5,17 @@
 @tailwind utilities;
 
 html {
-    @apply scroll-smooth overflow-y-scroll
+    @apply scroll-smooth overflow-y-scroll font-jakarta
+}
+
+.font-jakarta {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
 }

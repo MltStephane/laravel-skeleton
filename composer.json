@@ -12,6 +12,7 @@
         "laravel/sanctum": "^3.2.1",
         "laravel/tinker": "^2.8.1",
         "livewire/livewire": "^2.12",
+        "spatie/laravel-google-fonts": "^1.2",
         "spatie/laravel-permission": "^5.9",
         "wire-elements/pro": "^3.0",
         "wireui/wireui": "^1.17"
