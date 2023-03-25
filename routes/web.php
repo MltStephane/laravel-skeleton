@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::impersonate();
+
+Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])->name('get-logout');
 
 Route::name('public.')->group(function () {
     Route::get('/', \App\Http\Livewire\Public\Homepage::class)->name('homepage');
