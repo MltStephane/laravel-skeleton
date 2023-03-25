@@ -10,20 +10,30 @@
         @vite('resources/css/app.css')
         @livewireStyles
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @include('layouts.navigation')
-
-            @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
+    <body class="font-sans antialiased bg-gray-100">
+        <div class="max-w-7xl w-full mx-auto p-8">
+            <div class="fixed items-center max-w-7xl w-full mx-auto">
+                <x-card>
+                    <div class="h-full flex items-center justify-between w-full">
+                        <div class="flex text-xl font-semibold text-gray-600">
+                            <a href="{{ route('app.homepage') }}">{{ config('app.name') }}</a>
+                        </div>
+                        <div class="flex items-center justify-end gap-6">
+                            @hasrole('admin')
+                            <a
+                                href="{{ route('admin.dashboard') }}"
+                                class="text-gray-700 hover:text-blue-900 transition font-medium text-lg"
+                            >
+                                Panel d'administration
+                            </a>
+                            @endhasrole
+                        </div>
                     </div>
-                </header>
-            @endif
+                </x-card>
+            </div>
 
-            <main>
-                {{ $slot }}
+            <main class="mt-24">
+                {!! $slot !!}
             </main>
         </div>
 
@@ -32,6 +42,11 @@
             <x-button warning icon="user-remove" href="{{ route('impersonate.leave') }}" label="Arreter l'usurpation" />
         </div>
         @endImpersonating
+
+        <x-notifications z-index="z-50" position="bottom-right" />
+
+        @livewire('modal-pro')
+        @livewire('slide-over-pro')
 
         @wireUiScripts
         @livewireScripts
