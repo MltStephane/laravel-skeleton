@@ -7,7 +7,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        @googlefonts
+        @googlefonts('default')
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>

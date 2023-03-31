@@ -13,7 +13,7 @@ class SetupCommand extends Command
 
     public function handle(): void
     {
-        $roles = ['admin', 'user'];
+        $roles = ['admin', 'user', 'translator'];
 
         $this->components->info('Setup permissions by generating the default roles : ' . implode(', ', $roles));
 

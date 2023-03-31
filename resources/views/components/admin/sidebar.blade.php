@@ -26,6 +26,13 @@
                             icon="users"
                         />
                     </x-admin.menu-section>
+                    <x-admin.menu-section label="Paramètres">
+                        <x-admin.menu-item
+                            href="{{ config('translation-manager.route.prefix') }}/view/app"
+                            label="Traduction"
+                            icon="document-text"
+                        />
+                    </x-admin.menu-section>
                 </ul>
             </div>
         </div>
