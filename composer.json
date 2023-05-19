@@ -13,6 +13,7 @@
         "laravel/sanctum": "^3.2.1",
         "laravel/tinker": "^2.8.1",
         "livewire/livewire": "^2.12",
+        "opcodesio/log-viewer": "^2.4",
         "spatie/laravel-google-fonts": "^1.2",
         "spatie/laravel-permission": "^5.9",
         "spatie/laravel-sitemap": "^6.2",

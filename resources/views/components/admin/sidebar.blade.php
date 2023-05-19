@@ -17,6 +17,11 @@
                             label="Tableau de bord"
                             icon="home"
                         />
+                        <x-admin.menu-item
+                            :href="route('log-viewer.index')"
+                            label="Logs"
+                            icon="document-text"
+                        />
                     </x-admin.menu-section>
                     <x-admin.menu-section label="Gestion">
                         <x-admin.menu-item
